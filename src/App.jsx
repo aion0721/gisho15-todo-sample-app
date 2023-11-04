@@ -20,7 +20,11 @@ function App() {
         onChange={(e) => setTodo(e.target.value)}
       ></input>
       <button onClick={handleClick}>Add Todo</button>
-      <div>{todos.join(",")}</div>
+      {todos.map((element, index) => (
+        <div key={index}>
+          <label>{element}</label>
+        </div>
+      ))}
     </>
   );
 }
