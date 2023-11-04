@@ -22,7 +22,8 @@ function App() {
       <button onClick={handleClick}>Add Todo</button>
       {todos.map((element, index) => (
         <div key={index}>
-          <label>{element}</label>
+          <input type="checkbox" id={index}></input>
+          <label htmlFor={index}>{element}</label>
         </div>
       ))}
     </>
